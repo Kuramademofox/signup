@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Website</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image-wrapper">
+            <form class="signup-form" id="signupForm">
+                <h1>Get Started Now</h1>
+                <h1>Get Started Now</h1>
+                
+                 
+                <div class="merging">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" placeholder="Enter your name" required>
+                </div>
+
+                <div class="merging">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>   
+                </div>
+
+                <div class="merging">
+                    <label for="password">Enter your OTP</label>
+                    <input type="password" id="password" placeholder="Enter your OTP" required>
+                    <button type="button" id="verifyOTP">Verify</button>
+                </div>
+
+                <div class="checkbox">
+                    <input type="checkbox" id="terms" required>
+                    <label for="terms">I agree to the terms & policy</label>
+                </div>
+                <br>
+
+                <button type="submit" class="signup-button">Send OTP</button>
+                <br><br><br><br><br>
+
+                <br>
+                <p class="signin-text">Have an account? <a href="sigin.html">Sign In</a></p>
+            </form>
+            <div class="image-wrapper">
+                <img src="images/Photo.png" alt="Grocery Image">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('signupForm');
+            const verifyOTPButton = document.getElementById('verifyOTP');
+
+            // Form submit event listener
+            form.addEventListener('submit', (event) => {
+                const phone = document.getElementById('phone').value;
+                const password = document.getElementById('password').value;
+                const terms = document.getElementById('terms').checked;
+
+                if (!phone || !password || !terms) {
+                    alert('Please fill in all fields and agree to the terms.');
+                    event.preventDefault(); // Prevent form submission
+                } else {
+                    // Proceed with form submission, e.g., via AJAX
+                    alert('Form submitted successfully!');
+                }
+            });
+
+            // Verify OTP button click event listener
+            verifyOTPButton.addEventListener('click', () => {
+                const otp = document.getElementById('password').value;
+                // Here, you'd typically make an AJAX call to your server to validate the OTP
+                alert('OTP verification functionality is not implemented yet. You would send the OTP to your server here.');
+            });
+        });
+    </script>
+</body>
+</html>
