@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grocery Website - Sign In</title>
+</head>
+<body>
+    <div class="container">
+        <div class="form-image-wrapper">
+            <form class="signup-form" id="signinForm">
+                <h1>Welcome</h1>
+                 
+              
+                <div class="merging">
+                    <label for="countryCode">Country</label>
+                    <div class="flex-container">
+                        <select id="countryCode">
+                            <option value="+91">India (+91)</option>
+                            <option value="+1">USA (+1)</option>
+                            <option value="+44">UK (+44)</option>
+                            <!-- Add more countries as needed -->
+                        </select>
+                        <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+
+               
+
+                <div id="recaptcha-container"></div>
+                <button type="button" id="sendOTP" class="signup-button">Send OTP</button>
+                
+                <div id="otpSection" style="display: none;">
+                    <div class="merging">
+                        <label for="otp">Enter OTP</label>
+                        <input type="text" id="otp" placeholder="Enter your OTP" required>
+                    </div>
+                    <button type="submit" class="signup-button">Verify OTP</button>
+                </div>
+                
+                <p class="signup-text">Don't have an account? <a href="index.html">Sign Up</a></p>
+            </form>
+            <div class="image-wrapper">
+                <img src="images/Photo.png" alt="Grocery Image">
+            </div>
+        </div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
