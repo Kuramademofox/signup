@@ -1,16 +1,24 @@
 // Your web app's Firebase configuration
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyDPeBq2k72v2-V4U3tXPOU8MYzJMXEaqrY",
-    authDomain: "app-landing-page-125fe.firebaseapp.com",
-    projectId: "app-landing-page-125fe",
-    storageBucket: "app-landing-page-125fe.appspot.com",
-    messagingSenderId: "1027675866074",
-    appId: "1:1027675866074:web:ed9c9e9f37a1553620b6e3",
-    measurementId: "G-3ZVWGFBNZB"
+  apiKey: "AIzaSyDPeBq2k72v2-V4U3tXPOU8MYzJMXEaqrY",
+  authDomain: "signup-9cb1a.firebaseapp.com",
+  projectId: "signup-9cb1a",
+  storageBucket: "signup-9cb1a.appspot.com",
+  messagingSenderId: "489818758716",
+  appId: "1:489818758716:web:5e8c5f33a5920c52b2ad39",
+  measurementId: "G-VW283680SD"
 };
 
 // Initialize Firebase
-firebase.initializeApp(firebaseConfig);
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
 
 document.addEventListener('DOMContentLoaded', () => {
     const sendOTPButton = document.getElementById('sendOTP');
